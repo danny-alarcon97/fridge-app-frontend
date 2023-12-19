@@ -1,0 +1,564 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+/*   ----- Imports  -----  */
+/* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */
+/* @import "component1.css";   Component-specific stylesheets, if any.   */
+@import url("https://fonts.googleapis.com/css2?family=Coiny&family=Montserrat:ital,wght@0,200;0,300;0,700;1,200;1,300;1,600&family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,500;1,900&family=Sono:wght@400;500;600;700&display=swap");
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+/*   ----- Variables  -----  */
+:root {
+  --skyBlue-light: #b4cbd9;
+  --skyBlue-light-transparent: rgba(180, 203, 217, 0.9);
+  --skyBlue-medium: #91b7d9;
+  --skyBlue-medium-transparent: rgba(145, 183, 217, 0.9);
+  --skyBlue-dark: #3d5d90;
+  --skyBlue-dark-transparent: rgba(61, 93, 144, 0.9);
+  --cloudWhite: #fdfffc;
+  --forestGreen-light: #6c796b;
+  --forestGreen-medium: #2d402c;
+  --forestGreen-dark: #1f2d1f;
+  --templeGray-light: #8c8584;
+  --templeGray-medium: #403e3c;
+  --templeGray-dark: #262425;
+  --templeGray-dark-transparent: rgba(38, 36, 37, 0.9);
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {
+  /* Can alternatively define in html {}. */
+  /* background-color: ; */
+  background: url(../public/images/temple-ruins-resized.jpg);
+  background-attachment: fixed;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--skyeBlue-light);
+  font-family: Roboto, generic; /* Define with at least one font name and its related generic family name.*/
+  margin: 0 5%;
+  padding: 0;
+  max-width: 100%;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+  background-color: var(--skyBlue-dark-transparent);
+  color: var(--cloudWhite);
+  margin: 2%;
+  padding: 2%;
+  border-style: solid;
+  border-radius: 5px 5px 0 0;
+}
+
+#header-img {
+  height: 5em;
+  width: 5em;
+  margin: auto;
+  padding: 0;
+  border-style: solid;
+  border-radius: 100%;
+}
+
+main {
+  background-color: var(--templeGray-dark-transparent);
+  color: var(--cloudWhite);
+  margin: 2%;
+  padding: 2%;
+}
+section {
+}
+article {
+}
+#topic1 {
+}
+#topic2 {
+}
+div {
+}
+aside {
+}
+footer {
+  background-color: var(--skyBlue-dark-transparent);
+  color: var(--cloudWhite);
+  margin: 2%;
+  padding: 2%;
+  border-radius: 0 0 5px 5px;
+}
+
+/* ----- Anchors ----- Text links */
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a:link {
+  color: var(--cloudWhite);
+}
+a:hover {
+  color: var(--skyBlue-light);
+}
+a:active {
+  color: var(--skyBlue-dark);
+}
+
+a:visited {
+}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+nav a {
+  background-color: var(--skyBlue-medium);
+  color: var(--cloudWhite);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  border-style: solid;
+  padding: 1%;
+  margin: auto 10px;
+}
+
+nav a:hover {
+  background-color: var(--cloudWhite);
+  color: var(--skyBlue-dark);
+}
+
+.local a {
+  background-color: red;
+}
+
+/*  -----  Typography  ----- */
+p {
+}
+br {
+}
+ol,
+ul,
+dl {
+}
+li {
+}
+dt {
+}
+dd {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat, generic;
+}
+h1 {
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
+
+abbr {
+}
+acronym {
+}
+address {
+}
+blockquote {
+}
+q {
+}
+cite {
+}
+em {
+}
+hr {
+}
+mark {
+}
+s {
+}
+span {
+}
+strong {
+  color: var(--skyBlue-medium);
+}
+sub {
+}
+sup {
+}
+time {
+}
+
+/*  ----- Coding or instructional typography ----- */
+pre {
+}
+code {
+}
+kbd {
+}
+samp {
+}
+var {
+}
+del {
+}
+ins {
+}
+
+/*  ----- Table ----- */
+
+/* Table class */
+
+.table-order {
+  display: flex;
+  justify-content: center;
+  font-size: 0.9em;
+}
+
+.order-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+table img {
+  width: auto;
+  border-color: red;
+}
+
+table {
+  color: var(--cloudWhite);
+}
+
+caption {
+  text-align: center;
+  font-size: 30px;
+}
+
+.order-table thead {
+  background-color: var(--skyBlue-dark);
+  color: var(--cloudWhite);
+}
+.order-table thead tr {
+  display: block;
+  position: relative;
+}
+
+thead {
+}
+
+.order-table tbody {
+  display: block;
+  overflow: auto;
+  width: 100%;
+  height: 300px;
+}
+
+tbody {
+  color: var(--templeGray-dark);
+  font-weight: bold;
+}
+tfoot {
+}
+tr {
+}
+tr:nth-child(even) {
+}
+
+.order-table th {
+  text-decoration: underline;
+}
+
+.order-table th,
+.order-table td {
+  padding: 5px;
+  text-align: left;
+}
+
+.order-table td:nth-child(1),
+.order-table th:nth-child(1) {
+  min-width: 200px;
+}
+
+.order-table td:nth-child(2),
+.order-table th:nth-child(2) {
+  min-width: 200px;
+}
+
+.order-table td:nth-child(3),
+.order-table th:nth-child(3) {
+  text-align: right;
+  width: 350px;
+}
+
+.order-table tbody tr:nth-child(odd) {
+  background-color: var(--skyBlue-medium);
+}
+
+.order-table tbody tr:nth-child(even) {
+  background-color: var(--skyBlue-light);
+}
+
+th {
+}
+td {
+}
+td:nth-child(1) {
+}
+colgroup {
+}
+data {
+}
+datalist {
+}
+
+.manga-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  width: 100%;
+}
+
+.manga-table thead tr {
+  background-color: var(--skyBlue-dark);
+  color: var(--cloudWhite);
+  text-align: left;
+  font-weight: bold;
+}
+
+.manga-table th,
+.manga-table td {
+  padding: 12px 15px;
+}
+
+.manga-table tbody tr {
+  border-bottom: 1px solid var(--cloudWhite);
+}
+
+.manga-table tbody tr:nth-of-type(odd) {
+  background-color: var(--skyBlue-light);
+}
+
+.manga-table tbody tr:nth-of-type(even) {
+  background-color: var(--skyBlue-medium);
+}
+
+.manga-table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--skyBlue-dark);
+}
+
+.manga-table tbody tr.active-row {
+  font-weight: bold;
+  color: var(--skyBlue-dark);
+}
+
+/*  ----- Form ----- */
+form {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+fieldset {
+  border-color: red;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+label {
+  color: var(--skyBlue-dark);
+}
+
+.form-btn {
+  background: var(--skyBlue-dark);
+  border-radius: 15px;
+  font-family: Montserrat;
+  font-weight: bold;
+  color: var(--cloudWhite);
+  padding: 10px 20px 10px 20px;
+  border: solid var(--cloudWhite) 2px;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.form-btn:hover {
+  background: var(--skyBlue-medium);
+  color: var(--templeGray-dark);
+  text-decoration: none;
+}
+
+.radio-visit {
+  padding-bottom: 15px;
+}
+
+.choice-title {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.option {
+  padding: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--cloudWhite);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+optgroup {
+}
+option {
+}
+output {
+}
+meter {
+}
+progress {
+}
+
+/* ----- Media ----- */
+figure {
+  border: solid;
+  border-radius: 5%;
+}
+figcaption {
+  color: var(--skyBlue-light);
+  font-size: 25px;
+}
+figure img {
+}
+svg {
+}
+picture {
+}
+source {
+}
+iframe {
+}
+video {
+}
+audio {
+}
+embed {
+}
+object {
+}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+/* .gallery {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.gallery img {
+  max-width: 100%;
+}
+
+.gallery figure {
+  width: 320px;
+  margin: 1%;
+  padding: 1%;
+}
+
+.gallery figcaption {
+  display: block;
+  padding: 1% 1% 2% 1%;
+} */
+
+.floatright {
+}
+.floatleft {
+}
+.center-middle {
+}
+
+.ten {
+}
+.twenty {
+}
+.thirty {
+}
+.forty {
+}
+.fifty {
+}
+.sixty {
+}
+.seventy {
+}
+.eighty {
+}
+
+.radius {
+}
+.circle {
+}
+.boxshadow {
+}
+.tshadow {
+}
+.gradient {
+}
+.shape {
+}
+
+@keyframes App-logo {
+}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {
+}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {
+}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {
+}
+
+/* ----- Order Page ----- */
+/* .order-form.step-1 {
+  padding: 30px;
+  margin-bottom: 30px;
+
+  max-width: 680px;
+  margin: 0 auto;
+
+  display: flex;
+} */
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
