@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Import Components, styles, media
-import Navigation from "./components/Navigation";
+// import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import "./App.css";
 // import "./Queries.css";
@@ -16,19 +16,19 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <header className="header">
+        {/* <header className="header">
           <img id="header-img" src="./favicons/favicon-32x32.png" alt="logo" />
           <h1>Culinary Cache</h1>
           <Navigation />
-        </header>
+        </header> */}
 
         <main>
           <Hero />
         </main>
 
-        <footer>
+        {/* <footer>
           <p>&copy; 2023 Daniel Alarcon Huesca</p>
-        </footer>
+        </footer> */}
       </BrowserRouter>
     </>
   );

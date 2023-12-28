@@ -22,10 +22,10 @@ function Hero() {
             most of every ingredient and bring out the best in your culinary
             creations.
           </p>
-          <a href="#" className="btn">
+          <a href="#" className="btn btn--full margin-right-sm">
             Peek into my kitchen
           </a>
-          <a href="#" className="btn">
+          <a href="#" className="btn btn--outline">
             Learn More &darr;
           </a>
         </div>
@@ -33,7 +33,8 @@ function Hero() {
           <img
             id="organized-fridge"
             src="./img/organized-fridge.png"
-            alt="clean-fridge-img"
+            className="hero-img"
+            alt="Organized fridge with food stored in neat containers"
           ></img>
         </div>
       </div>
