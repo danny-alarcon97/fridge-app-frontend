@@ -4,7 +4,7 @@ import { FaHome } from "react-icons/fa";
 
 function Navigation() {
   return (
-    <nav>
+    <nav className="main-nav">
       <Link to="/">
         <i>
           <FaHome />
