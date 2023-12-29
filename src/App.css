@@ -32,24 +32,34 @@ Large: 1.8
 
 --- 02 COLORS
 
-- Primary: #708238
+- Primary: #93E9BE
 - Tints:
-#f1f3eb
-#e2e6d7
-#8d9b60
+- 90 % lighter
+#f4fdf9
+- 80% lighter
+#e9fbf2
+- 20% lighter
+#a9edcb
 
 - Shades: 
-#657532
-#222711
+- 10% darker 
+#84d2ab
+- 70% darker
+#2c4639
 
 - Primary: #e67e22
 - Tints:
+- 90 % lighter
 #fdf2e9
+- 80% lighter
 #fae5d3
+- 20% lighter
 #eb984e
 
-- Shades: 
+- Shades:
+- 10% darker 
 #cf711f
+- 70% darker
 #45260a
 
 - Accents:
@@ -57,7 +67,7 @@ Large: 1.8
 
 #888
 #767676 (lightest grey allowed on #fff)
-#6f6f6f (lightest grey allowed on #f1f3eb)
+#6f6f6f (lightest grey allowed on #f4fdf9)
 #555
 #333
 
@@ -181,7 +191,7 @@ body {
   display: block;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #657532;
+  color: #84d2ab;
   text-transform: uppercase;
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
@@ -207,21 +217,15 @@ body {
   transition: all 0.3s;
 }
 
-.btn:link,
-.btn:visited {
-  background-color: #708238;
-  color: #fff;
-}
-
 .btn--full:link,
 .btn--full:visited {
-  background-color: #708238;
+  background-color: #93e9be;
   color: #fff;
 }
 
 .btn--full:hover,
 .btn--full:active {
-  background-color: #657532;
+  background-color: #84d2ab;
 }
 
 .btn--outline:link,
@@ -232,7 +236,7 @@ body {
 
 .btn--outline:hover,
 .btn--outline:active {
-  background-color: #f1f3eb;
+  background-color: #f4fdf9;
 
   /* border: 3px solid #fff; */
 
@@ -242,7 +246,7 @@ body {
 
 .btn--form {
   background-color: #45260a;
-  color: #f1f3eb;
+  color: #f4fdf9;
   align-self: end;
   padding: 1.2rem;
 }
@@ -255,7 +259,7 @@ body {
 .link:link,
 .link:visited {
   display: inline-block;
-  color: #708238;
+  color: #93e9be;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
   padding-bottom: 2px;
@@ -264,7 +268,7 @@ body {
 
 .link:hover,
 .link:active {
-  color: #657532;
+  color: #84d2ab;
   border-bottom: 1px solid transparent;
 }
 
@@ -286,14 +290,14 @@ body {
 .list-icon {
   width: 3rem;
   height: 3rem;
-  color: #708238;
+  color: #93e9be;
 }
 
 *:focus {
   outline: none;
   /* outline: 4px dotted #e67e22; */
   /* outline-offset: 8px; */
-  box-shadow: 0 0 0 0.8rem #657532;
+  box-shadow: 0 0 0 0.8rem #84d2ab;
 }
 
 /* HELPER/SETTINGS CLASSES */

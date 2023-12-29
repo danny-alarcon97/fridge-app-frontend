@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import "./App.css";
-// import "./Queries.css";
+import "./Queries.css";
 import "./Style.css";
 
 // Define the function that renders the content in Routes, using State.
