@@ -44,23 +44,12 @@ Large: 1.8
 - Shades: 
 - 10% darker 
 #84d2ab
+- 20% darker
+#76ba98
+- 50% darker
+#4a755f
 - 70% darker
 #2c4639
-
-- Primary: #e67e22
-- Tints:
-- 90 % lighter
-#fdf2e9
-- 80% lighter
-#fae5d3
-- 20% lighter
-#eb984e
-
-- Shades:
-- 10% darker 
-#cf711f
-- 70% darker
-#45260a
 
 - Accents:
 - Greys
@@ -219,13 +208,13 @@ body {
 
 .btn--full:link,
 .btn--full:visited {
-  background-color: #93e9be;
+  background-color: #84d2ab;
   color: #fff;
 }
 
 .btn--full:hover,
 .btn--full:active {
-  background-color: #84d2ab;
+  background-color: #76ba98;
 }
 
 .btn--outline:link,

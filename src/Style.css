@@ -123,18 +123,18 @@
   width: 100%;
 }
 
-.delivered-meals {
+.user-population {
   display: flex;
   align-items: center;
   gap: 1.6rem;
   margin-top: 8rem;
 }
 
-.delivered-imgs {
+.user-imgs {
   display: flex;
 }
 
-.delivered-imgs img {
+.user-imgs img {
   height: 4.8rem;
   width: 4.8rem;
   border-radius: 50%;
@@ -142,16 +142,16 @@
   border: 3px solid #f4fdf9;
 }
 
-.delivered-imgs img:last-child {
+.user-imgs img:last-child {
   margin: 0;
 }
 
-.delivered-text {
+.user-text {
   font-size: 1.8rem;
   font-weight: 600;
 }
 
-.delivered-text span {
+.user-text span {
   color: #84d2ab;
   font-weight: 700;
 }

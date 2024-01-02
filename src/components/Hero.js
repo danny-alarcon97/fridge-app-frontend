@@ -16,11 +16,8 @@ function Hero() {
             versatile digital assistant helps you manage your kitchen inventory
             with ease, ensuring you always know what's in your pantry and
             fridge. Whether you're a cooking enthusiast or just looking to
-            simplify your meal prep, Culinary Cache is the ideal solution for
-            efficient kitchen management. It aims to make cooking more
-            accessible, enjoyable, and waste-free, empowering you to make the
-            most of every ingredient and bring out the best in your culinary
-            creations.
+            simplify your meal prep, this app is the ideal solution for
+            efficient kitchen management.
           </p>
           <a href="#" className="btn btn--full margin-right-sm">
             Peek into my kitchen
@@ -28,10 +25,23 @@ function Hero() {
           <a href="#" className="btn btn--outline">
             Learn More &darr;
           </a>
+          <div className="user-population">
+            <div className="user-imgs">
+              <img src="./img/customers/ben.jpg" alt="user photo" />
+              <img src="./img/customers/customer-1.jpg" alt="user photo" />
+              <img src="./img/customers/customer-2.jpg" alt="user photo" />
+              <img src="./img/customers/customer-3.jpg" alt="user photo" />
+              <img src="./img/customers/customer-4.jpg" alt="user photo" />
+              <img src="./img/customers/customer-5.jpg" alt="user photo" />
+            </div>
+            <p className="user-text">
+              <span>Empowering</span> you to make the most of every ingredient
+              and bring out the best in your culinary creations.
+            </p>
+          </div>
         </div>
         <div className="hero-img-box">
           <img
-            id="organized-fridge"
             src="./img/organized-fridge.png"
             className="hero-img"
             alt="Organized fridge with food stored in neat containers"
