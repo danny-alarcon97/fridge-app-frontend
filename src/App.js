@@ -11,6 +11,7 @@ import "./Queries.css";
 import HomePage from "./pages/HomePage";
 
 import ItemsPage from "./pages/ItemsPage";
+import FridgePage from "./pages/FridgePage";
 import EditItemPageTable from "./pages/EditItemPageTable";
 import AddItemPageTable from "./pages/AddItemPageTable";
 
@@ -39,6 +40,12 @@ function App() {
                 path="/items"
                 element={<ItemsPage setItem={setItemToEdit} />}
               />
+
+              <Route
+                path="/fridge-items"
+                element={<FridgePage setItem={setItemToEdit} />}
+              />
+
               <Route path="/add-item" element={<AddItemPageTable />} />
               <Route
                 path="/edit-item"

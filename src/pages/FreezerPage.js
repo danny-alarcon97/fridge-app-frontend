@@ -5,7 +5,7 @@ import { IoMdAddCircle } from "react-icons/io";
 import ItemList from "../components/ItemList";
 import { Link } from "react-router-dom";
 
-function ItemsPage({ setItem }) {
+function FreezerPage({ setItem }) {
   // Use the Navigate for redirection
   const redirect = useNavigate();
 
@@ -13,13 +13,16 @@ function ItemsPage({ setItem }) {
   const [items, setItems] = useState([]);
   const [loadingError, setLoadingError] = useState(null);
 
-  // RETRIEVE the entire list of items
+  // RETRIEVE the entire list of freezer items
   const loadItems = async () => {
     try {
       const response = await fetch("/items");
-      const items = await response.json();
-      if (Array.isArray(items)) {
-        setItems(items);
+      const allItems = await response.json();
+      if (Array.isArray(allItems)) {
+        const freezerItems = allItems.filter(
+          (item) => item.compartment === "freezer"
+        );
+        setItems(freezerItems);
       } else {
         throw new Error("Data fetched is not an array");
       }
@@ -57,8 +60,8 @@ function ItemsPage({ setItem }) {
   // DISPLAY the items or an error message
   return (
     <>
-      <h2>Item's in compartment</h2>
-      <p>This page holds our collection of items</p>
+      <h2>Item's in your Fridge compartment</h2>
+      <p>This page holds our collection of Fridge items</p>
       <Link to="/add-item">
         <i>
           <IoMdAddCircle title="add an item to your compartment." />
@@ -74,4 +77,4 @@ function ItemsPage({ setItem }) {
   );
 }
 
-export default ItemsPage;
+export default FreezerPage;

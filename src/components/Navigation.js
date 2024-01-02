@@ -18,9 +18,9 @@ function Navigation() {
         </li>
 
         <li>
-          <a className="main-nav-link" href="#">
-            Section 1
-          </a>
+          <Link className="main-nav-link" to="/fridge-items">
+            Fridge
+          </Link>
         </li>
 
         <li>
