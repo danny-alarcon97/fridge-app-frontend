@@ -4,10 +4,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Import Components, styles, media
 import Navigation from "./components/Navigation";
-import Hero from "./components/Hero";
 import "./App.css";
-import "./Queries.css";
 import "./Style.css";
+import "./Queries.css";
+
+import HomePage from "./pages/HomePage";
+
+import ItemsPage from "./pages/ItemsPage";
+import EditItemPageTable from "./pages/EditItemPageTable";
+import AddItemPageTable from "./pages/AddItemPageTable";
 
 // Define the function that renders the content in Routes, using State.
 function App() {
@@ -26,12 +31,26 @@ function App() {
         </header>
 
         <main>
-          <Hero />
+          <section>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+
+              <Route
+                path="/items"
+                element={<ItemsPage setItem={setItemToEdit} />}
+              />
+              <Route path="/add-item" element={<AddItemPageTable />} />
+              <Route
+                path="/edit-item"
+                element={<EditItemPageTable itemToEdit={item} />}
+              />
+            </Routes>
+          </section>
         </main>
 
-        {/* <footer>
+        <footer>
           <p>&copy; 2023 Daniel Alarcon Huesca</p>
-        </footer> */}
+        </footer>
       </BrowserRouter>
     </>
   );

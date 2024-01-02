@@ -15,8 +15,16 @@ function Item({ item, onEdit, onDelete }) {
       </td>
       <td>{item.name}</td>
       <td>{item.brand}</td>
-      <td>{item.purchaseDate.slice(0, 10)}</td>
-      <td>{item.expireDate.slice(0, 10)}</td>
+      <td>
+        {item.purchaseDate
+          ? item.purchaseDate.slice(0, 10)
+          : "No purchase date provided"}
+      </td>
+      <td>
+        {item.expireDate
+          ? item.expireDate.slice(0, 10)
+          : "No expiration date provided"}
+      </td>
       <td>{item.price}</td>
       <td>{item.compartment}</td>
       <td>{item.amountOf}</td>
