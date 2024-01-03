@@ -24,9 +24,9 @@ function Navigation() {
         </li>
 
         <li>
-          <a className="main-nav-link" href="#">
-            Section 2
-          </a>
+          <Link className="main-nav-link" to="/freezer-items">
+            Freezer
+          </Link>
         </li>
 
         <li>

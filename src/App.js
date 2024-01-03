@@ -12,6 +12,7 @@ import HomePage from "./pages/HomePage";
 
 import ItemsPage from "./pages/ItemsPage";
 import FridgePage from "./pages/FridgePage";
+import FreezerPage from "./pages/FreezerPage";
 import EditItemPageTable from "./pages/EditItemPageTable";
 import AddItemPageTable from "./pages/AddItemPageTable";
 
@@ -44,6 +45,11 @@ function App() {
               <Route
                 path="/fridge-items"
                 element={<FridgePage setItem={setItemToEdit} />}
+              />
+
+              <Route
+                path="/freezer-items"
+                element={<FreezerPage setItem={setItemToEdit} />}
               />
 
               <Route path="/add-item" element={<AddItemPageTable />} />
