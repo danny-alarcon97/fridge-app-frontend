@@ -17,9 +17,19 @@ function ItemsPage({ setItem }) {
   const loadItems = async () => {
     try {
       const response = await fetch("/items");
-      const items = await response.json();
-      if (Array.isArray(items)) {
-        setItems(items);
+      const fetchedItems = await response.json();
+      if (Array.isArray(fetchedItems)) {
+        // Filter out items without a valid expireDate
+        const validItems = fetchedItems.filter(
+          (item) => item.expireDate && item.expireDate !== "N/A"
+        );
+
+        // Optionally, you can still sort the remaining items by expireDate
+        const sortedItems = validItems.sort(
+          (a, b) => new Date(a.expireDate) - new Date(b.expireDate)
+        );
+
+        setItems(sortedItems);
       } else {
         throw new Error("Data fetched is not an array");
       }
@@ -57,8 +67,10 @@ function ItemsPage({ setItem }) {
   // DISPLAY the items or an error message
   return (
     <>
-      <h2>Item's in compartment</h2>
-      <p>This page holds our collection of items</p>
+      <h2>Item's with expiration dates coming up</h2>
+      <p>
+        This page holds all of your items in order of upcoming expiration dates
+      </p>
       <Link to="/add-item">
         <i>
           <IoMdAddCircle title="add an item to your compartment." />

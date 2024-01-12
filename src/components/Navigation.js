@@ -6,14 +6,14 @@ function Navigation() {
     <nav className="main-nav">
       <ul className="main-nav-list">
         <li>
-          <Link className="main-nav-link" to="/">
-            Home
+          <Link className="main-nav-link nav-cta" to="/">
+            How It Works
           </Link>
         </li>
 
         <li>
-          <Link className="main-nav-link" to="/items">
-            Items
+          <Link className="main-nav-link" to="/expiration-items">
+            Expiration List
           </Link>
         </li>
 
@@ -30,15 +30,9 @@ function Navigation() {
         </li>
 
         <li>
-          <a className="main-nav-link" href="#">
-            Section 3
-          </a>
-        </li>
-
-        <li>
-          <a className="main-nav-link" href="#">
-            Section 4
-          </a>
+          <Link className="main-nav-link" to="/pantry-items">
+            Pantry
+          </Link>
         </li>
       </ul>
     </nav>

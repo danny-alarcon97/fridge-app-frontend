@@ -13,6 +13,7 @@ import HomePage from "./pages/HomePage";
 import ItemsPage from "./pages/ItemsPage";
 import FridgePage from "./pages/FridgePage";
 import FreezerPage from "./pages/FreezerPage";
+import PantryPage from "./pages/PantryPage";
 import EditItemPageTable from "./pages/EditItemPageTable";
 import AddItemPageTable from "./pages/AddItemPageTable";
 
@@ -38,7 +39,7 @@ function App() {
               <Route path="/" element={<HomePage />} />
 
               <Route
-                path="/items"
+                path="/expiration-items"
                 element={<ItemsPage setItem={setItemToEdit} />}
               />
 
@@ -50,6 +51,11 @@ function App() {
               <Route
                 path="/freezer-items"
                 element={<FreezerPage setItem={setItemToEdit} />}
+              />
+
+              <Route
+                path="/pantry-items"
+                element={<PantryPage setItem={setItemToEdit} />}
               />
 
               <Route path="/add-item" element={<AddItemPageTable />} />
