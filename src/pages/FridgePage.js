@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { IoMdAddCircle } from "react-icons/io";
 
 import ItemList from "../components/ItemList";
-import { Link } from "react-router-dom";
 
 function FridgePage({ setItem }) {
   // Use the Navigate for redirection
@@ -13,6 +12,10 @@ function FridgePage({ setItem }) {
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [loadingError, setLoadingError] = useState(null);
+
+  const navigateToAddItem = () => {
+    redirect("/add-item", { state: { from: "/fridge-items" } });
+  };
 
   // RETRIEVE the entire list of fridge items
   const loadItems = async () => {
@@ -69,12 +72,13 @@ function FridgePage({ setItem }) {
     <>
       <h2>Item's in your Fridge compartment</h2>
       <p>This page holds our collection of Fridge items</p>
-      <Link to="/add-item">
-        <i>
-          <IoMdAddCircle title="add an item to your compartment." />
-          <span>ADD ITEM</span>
-        </i>
-      </Link>
+      <button
+        onClick={navigateToAddItem}
+        title="Add an item to your compartment"
+      >
+        <IoMdAddCircle />
+        <span>ADD ITEM</span>
+      </button>
       {loading && <p>Loading...</p>}
       {loadingError && <p>Error loading items: {loadingError}</p>}
       {!loading && !loadingError && (

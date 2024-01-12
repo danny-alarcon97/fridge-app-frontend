@@ -7,7 +7,7 @@ function Navigation() {
       <ul className="main-nav-list">
         <li>
           <Link className="main-nav-link nav-cta" to="/">
-            How It Works
+            Home
           </Link>
         </li>
 
