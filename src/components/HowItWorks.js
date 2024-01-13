@@ -15,16 +15,16 @@ function HowItWorks() {
         <div class="step-text-box">
           <p class="step-number">01</p>
           <h3 class="heading-tertiary">
-            Decide what compartment you wish to store an item
+            Select the Appropriate Compartment for Item Storage
           </h3>
           <p class="step-description">
-            There are three compartments in which you can choose to store items.
-            Want to document a purchase of milk? Go to your{" "}
-            <strong>"fridge"</strong> page and add the item from there. Same
-            goes for the other two compartments, the <strong>"freezer"</strong>{" "}
-            and your <strong>"pantry"</strong>. The only essential info the app
-            needs includes the name of the item and how many of said items are
-            being added.
+            The application offers three distinct compartments for item storage:
+            the <strong>"Fridge"</strong>, <strong>"Freezer"</strong>, and{" "}
+            <strong>"Pantry"</strong>. For instance, to log the purchase of
+            milk, navigate to the <strong>"Fridge"</strong> section and record
+            the item there. This procedure is identical for the other
+            compartments. The application requires only the item's name and the
+            quantity being stored.
           </p>
         </div>
 
@@ -48,22 +48,23 @@ function HowItWorks() {
         </div>
         <div class="step-text-box">
           <p class="step-number">02</p>
-          <h3 class="heading-tertiary">Approve your weekly meal plan</h3>
+          <h3 class="heading-tertiary">Organize your kitchen!</h3>
           <p class="step-description">
-            Once per week, approve the meal plan generated for you by Omnifood
-            AI. You can change ingredients, swap entire meals, or even add your
-            own recipes.
+            After populating your kitchen compartments with items, you have full
+            control to modify or remove them. You can access your kitchen
+            compartments through the navigation menu for easy management.
           </p>
         </div>
 
         {/* <!-- STEP 03 --> */}
         <div class="step-text-box">
           <p class="step-number">03</p>
-          <h3 class="heading-tertiary">Receive meals at convenient time</h3>
+          <h3 class="heading-tertiary">Anything expiring soon?</h3>
           <p class="step-description">
-            Best chefs in town will cook your selected meal every day, and we
-            will deliver it to your door whenever works best for you. You can
-            change delivery schedule and address daily!
+            The app also allows you to view items nearing expiration via the{" "}
+            <strong>"Expiration List"</strong> feature. It's important to remove
+            items from the list once they are no longer present in your kitchen,
+            ensuring your inventory remains up-to-date and organized.
           </p>
         </div>
         <div class="step-img-box">

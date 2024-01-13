@@ -12,12 +12,6 @@ function Navigation() {
         </li>
 
         <li>
-          <Link className="main-nav-link" to="/expiration-items">
-            Expiration List
-          </Link>
-        </li>
-
-        <li>
           <Link className="main-nav-link" to="/fridge-items">
             Fridge
           </Link>
@@ -32,6 +26,12 @@ function Navigation() {
         <li>
           <Link className="main-nav-link" to="/pantry-items">
             Pantry
+          </Link>
+        </li>
+
+        <li>
+          <Link className="main-nav-link" to="/expiration-items">
+            Expiration List
           </Link>
         </li>
       </ul>

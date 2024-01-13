@@ -22,7 +22,7 @@ function Hero() {
           <a href="#" className="btn btn--full margin-right-sm">
             Peek into my kitchen
           </a>
-          <a href="#" className="btn btn--outline">
+          <a href="#how" className="btn btn--outline">
             Learn More &darr;
           </a>
           <div className="user-population">
