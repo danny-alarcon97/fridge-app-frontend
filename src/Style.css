@@ -290,10 +290,18 @@
   gap: 1.6rem;
 }
 
+.meal-attribute-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .meal-icon {
   height: 2.4rem;
   width: 2.4rem;
   color: #93e9be;
+  cursor: pointer;
 }
 
 .meal-img {
