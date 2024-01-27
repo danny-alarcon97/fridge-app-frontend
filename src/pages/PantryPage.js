@@ -45,7 +45,7 @@ function PantryPage({ setItem }) {
   // UPDATE a single item
   const onEditItem = async (item) => {
     setItem(item);
-    redirect("/edit-item");
+    redirect("/edit-item", { state: { from: "/pantry-items" } });
   };
 
   // DELETE a single item

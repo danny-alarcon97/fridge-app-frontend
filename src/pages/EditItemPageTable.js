@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { FaEdit } from "react-icons/fa";
 
 export const EditItemPageTable = ({ itemToEdit }) => {
@@ -12,6 +12,8 @@ export const EditItemPageTable = ({ itemToEdit }) => {
   const [amountOf, setAmountOf] = useState(itemToEdit.amountOf);
 
   const redirect = useNavigate();
+  const location = useLocation();
+  const originPath = location.state?.from || "/";
 
   const editItem = async (e) => {
     e.preventDefault();
@@ -32,7 +34,7 @@ export const EditItemPageTable = ({ itemToEdit }) => {
 
       if (response.status === 200) {
         alert("Item updated successfully!");
-        redirect("/items");
+        redirect(originPath);
       } else {
         const errMessage = await response.text();
         alert(

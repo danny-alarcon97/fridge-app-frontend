@@ -45,7 +45,7 @@ function FreezerPage({ setItem }) {
   // UPDATE a single item
   const onEditItem = async (item) => {
     setItem(item);
-    redirect("/edit-item");
+    redirect("/edit-item", { state: { from: "/freezer-items" } });
   };
 
   // DELETE a single item

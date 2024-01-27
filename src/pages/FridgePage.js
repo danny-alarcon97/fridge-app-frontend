@@ -45,7 +45,7 @@ function FridgePage({ setItem }) {
   // UPDATE a single item
   const onEditItem = async (item) => {
     setItem(item);
-    redirect("/edit-item");
+    redirect("/edit-item", { state: { from: "/fridge-items" } });
   };
 
   // DELETE a single item

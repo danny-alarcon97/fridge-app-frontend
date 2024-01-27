@@ -1,11 +1,9 @@
 import { React, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { IoMdAddCircle } from "react-icons/io";
 
 import ItemList from "../components/ItemList";
-import { Link } from "react-router-dom";
 
-function ItemsPage({ setItem }) {
+function ExpirePage({ setItem }) {
   // Use the Navigate for redirection
   const redirect = useNavigate();
 
@@ -42,7 +40,7 @@ function ItemsPage({ setItem }) {
   // UPDATE a single item
   const onEditItem = async (item) => {
     setItem(item);
-    redirect("/edit-item");
+    redirect("/edit-item", { state: { from: "/expiration-items" } });
   };
 
   // DELETE a single item
@@ -67,16 +65,10 @@ function ItemsPage({ setItem }) {
   // DISPLAY the items or an error message
   return (
     <>
-      <h2>Item's with expiration dates coming up</h2>
+      <h2>Item's with expiration dates coming up:</h2>
       <p>
         This page holds all of your items in order of upcoming expiration dates
       </p>
-      <Link to="/add-item">
-        <i>
-          <IoMdAddCircle title="add an item to your compartment." />
-          ADD ITEM
-        </i>
-      </Link>
       {loadingError ? (
         <p>Error loading items: {loadingError}</p>
       ) : (
@@ -86,4 +78,4 @@ function ItemsPage({ setItem }) {
   );
 }
 
-export default ItemsPage;
+export default ExpirePage;

@@ -10,7 +10,7 @@ import "./Queries.css";
 
 import HomePage from "./pages/HomePage";
 
-import ItemsPage from "./pages/ItemsPage";
+import ExpirePage from "./pages/ExpirePage";
 import FridgePage from "./pages/FridgePage";
 import FreezerPage from "./pages/FreezerPage";
 import PantryPage from "./pages/PantryPage";
@@ -40,7 +40,7 @@ function App() {
 
               <Route
                 path="/expiration-items"
-                element={<ItemsPage setItem={setItemToEdit} />}
+                element={<ExpirePage setItem={setItemToEdit} />}
               />
 
               <Route
