@@ -4,6 +4,7 @@ import { IoMdAdd } from "react-icons/io";
 
 export const AddItemPageTable = () => {
   const [name, setName] = useState("");
+  const [itemType, setItemType] = useState("");
   const [brand, setBrand] = useState("");
   const [purchaseDate, setPurchaseDate] = useState("");
   const [expireDate, setExpireDate] = useState("");
@@ -19,6 +20,7 @@ export const AddItemPageTable = () => {
     e.preventDefault();
     const newItem = {
       name,
+      itemType,
       brand,
       purchaseDate,
       expireDate,
@@ -62,6 +64,7 @@ export const AddItemPageTable = () => {
             <thead>
               <tr>
                 <th>Name</th>
+                <th>Item Type</th>
                 <th>Brand</th>
                 <th>Purchase Date</th>
                 <th>Expiration Date</th>
@@ -70,6 +73,7 @@ export const AddItemPageTable = () => {
                 <th>Amount of Items</th>
               </tr>
             </thead>
+
             <tbody>
               <tr>
                 <td>
@@ -80,6 +84,17 @@ export const AddItemPageTable = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     id="name"
+                  />
+                </td>
+
+                <td>
+                  <label for="itemType">Item Type</label>
+                  <input
+                    type="text"
+                    placeholder="Type of Product"
+                    value={itemType}
+                    onChange={(e) => setItemType(e.target.value)}
+                    id="itemType"
                   />
                 </td>
 

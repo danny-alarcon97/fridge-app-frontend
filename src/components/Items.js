@@ -12,7 +12,9 @@ function Item({ item, onEdit, onDelete }) {
       />
       <div className="meal-content">
         <div className="meal-tags">
-          <span className="tag tag--vegan">Vegan</span>
+          <span className="tag tag--vegan">
+            {item.itemType ? item.itemType : "other"}
+          </span>
         </div>
         <p className="meal-title">{item.name}</p>
         <ul className="meal-attributes">

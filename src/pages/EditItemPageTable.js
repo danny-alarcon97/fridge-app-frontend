@@ -4,6 +4,7 @@ import { FaEdit } from "react-icons/fa";
 
 export const EditItemPageTable = ({ itemToEdit }) => {
   const [name, setName] = useState(itemToEdit.name);
+  const [itemType, setItemType] = useState(itemToEdit.itemType);
   const [brand, setBrand] = useState(itemToEdit.brand);
   const [purchaseDate, setPurchaseDate] = useState(itemToEdit.purchaseDate);
   const [expireDate, setExpireDate] = useState(itemToEdit.expireDate);
@@ -22,6 +23,7 @@ export const EditItemPageTable = ({ itemToEdit }) => {
         method: "PUT",
         body: JSON.stringify({
           name,
+          itemType,
           brand,
           purchaseDate,
           expireDate,
@@ -58,6 +60,7 @@ export const EditItemPageTable = ({ itemToEdit }) => {
             <thead>
               <tr>
                 <th>Name</th>
+                <th>Item Type</th>
                 <th>Brand</th>
                 <th>Purchase Date</th>
                 <th>Expiration Date</th>
@@ -66,6 +69,7 @@ export const EditItemPageTable = ({ itemToEdit }) => {
                 <th>Amount of Items</th>
               </tr>
             </thead>
+
             <tbody>
               <tr>
                 <td>
@@ -76,6 +80,17 @@ export const EditItemPageTable = ({ itemToEdit }) => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     id="name"
+                  />
+                </td>
+
+                <td>
+                  <label for="itemType">Item Type</label>
+                  <input
+                    type="text"
+                    placeholder="Type of Product"
+                    value={itemType}
+                    onChange={(e) => setItemType(e.target.value)}
+                    id="itemType"
                   />
                 </td>
 
