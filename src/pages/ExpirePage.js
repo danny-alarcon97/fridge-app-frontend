@@ -65,15 +65,18 @@ function ExpirePage({ setItem }) {
   // DISPLAY the items or an error message
   return (
     <>
-      <h2>Item's with expiration dates coming up:</h2>
-      <p>
-        This page holds all of your items in order of upcoming expiration dates
-      </p>
-      {loadingError ? (
-        <p>Error loading items: {loadingError}</p>
-      ) : (
-        <ItemList items={items} onEdit={onEditItem} onDelete={onDeleteItem} />
-      )}
+      <section className="section-meals" id="meals">
+        <div className="container center-text">
+          <span className="subheading">Expiration List</span>
+          <h2 className="heading-secondary">Items Expiring Soon</h2>
+        </div>
+
+        {loadingError ? (
+          <p>Error loading items: {loadingError}</p>
+        ) : (
+          <ItemList items={items} onEdit={onEditItem} onDelete={onDeleteItem} />
+        )}
+      </section>
     </>
   );
 }

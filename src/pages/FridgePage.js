@@ -70,20 +70,27 @@ function FridgePage({ setItem }) {
   // DISPLAY the items or an error message
   return (
     <>
-      <h2>Item's in your Fridge compartment</h2>
-      <p>This page holds our collection of Fridge items</p>
-      <button
-        onClick={navigateToAddItem}
-        title="Add an item to your compartment"
-      >
-        <IoMdAddCircle />
-        <span>ADD ITEM</span>
-      </button>
-      {loading && <p>Loading...</p>}
-      {loadingError && <p>Error loading items: {loadingError}</p>}
-      {!loading && !loadingError && (
-        <ItemList items={items} onEdit={onEditItem} onDelete={onDeleteItem} />
-      )}
+      <section className="section-meals" id="meals">
+        <div className="container center-text">
+          <span className="subheading">Cold Essentials</span>
+          <h2 className="heading-secondary">Fridge Compartment</h2>
+        </div>
+
+        <h2>Item's in your Fridge compartment</h2>
+        <p>This page holds our collection of Fridge items</p>
+        <button
+          onClick={navigateToAddItem}
+          title="Add an item to your compartment"
+        >
+          <IoMdAddCircle />
+          <span>ADD ITEM</span>
+        </button>
+        {loading && <p>Loading...</p>}
+        {loadingError && <p>Error loading items: {loadingError}</p>}
+        {!loading && !loadingError && (
+          <ItemList items={items} onEdit={onEditItem} onDelete={onDeleteItem} />
+        )}
+      </section>
     </>
   );
 }

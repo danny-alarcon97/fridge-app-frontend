@@ -70,20 +70,26 @@ function PantryPage({ setItem }) {
   // DISPLAY the items or an error message
   return (
     <>
-      <h2>Item's in your Pantry compartment</h2>
-      <p>This page holds our collection of Pantry items</p>
-      <button
-        onClick={navigateToAddItem}
-        title="Add an item to your compartment"
-      >
-        <IoMdAddCircle />
-        <span>ADD ITEM</span>
-      </button>
-      {loading && <p>Loading...</p>}
-      {loadingError && <p>Error loading items: {loadingError}</p>}
-      {!loading && !loadingError && (
-        <ItemList items={items} onEdit={onEditItem} onDelete={onDeleteItem} />
-      )}
+      <section className="section-meals" id="meals">
+        <div className="container center-text">
+          <span className="subheading">general storage</span>
+          <h2 className="heading-secondary">Pantry Compartment</h2>
+        </div>
+        <h2>Item's in your Pantry compartment</h2>
+        <p>This page holds our collection of Pantry items</p>
+        <button
+          onClick={navigateToAddItem}
+          title="Add an item to your compartment"
+        >
+          <IoMdAddCircle />
+          <span>ADD ITEM</span>
+        </button>
+        {loading && <p>Loading...</p>}
+        {loadingError && <p>Error loading items: {loadingError}</p>}
+        {!loading && !loadingError && (
+          <ItemList items={items} onEdit={onEditItem} onDelete={onDeleteItem} />
+        )}
+      </section>
     </>
   );
 }

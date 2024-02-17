@@ -5,11 +5,7 @@ import { FaTrashCan } from "react-icons/fa6";
 function Item({ item, onEdit, onDelete }) {
   return (
     <div className="meal">
-      <img
-        src="./img/customers/ben.jpg"
-        className="meal-img"
-        alt="user photo"
-      />
+      <img src="./img/customers/ben.jpg" className="meal-img" alt="user" />
       <div className="meal-content">
         <div className="meal-tags">
           <span className="tag tag--vegan">
