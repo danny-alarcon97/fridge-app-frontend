@@ -33,7 +33,7 @@ function Item({ item, onEdit, onDelete }) {
           </li>
           <li className="meal-attribute">
             <span>
-              <strong>Price:</strong> {item.price}
+              <strong>Price: $</strong> {item.price}
             </span>
           </li>
           <li className="meal-attribute">
