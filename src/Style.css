@@ -259,21 +259,29 @@
   font-weight: 600;
 }
 
-.tag--vegetarian {
-  background-color: #51cf66;
+.tag--dairy {
+  background-color: #24aeeb;
 }
-.tag--vegan {
+.tag--meat {
+  background-color: red;
+}
+.tag--vegetable {
+  background-color: green;
+}
+.tag--fruit {
+  background-color: orange;
+}
+.tag--seafood {
   background-color: #94d82d;
-}
-.tag--paleo {
-  background-color: #ffd43b;
 }
 
 .meal-title {
   font-size: 2.4rem;
   color: #333;
+  display: flex;
   font-weight: 600;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
+  justify-content: center;
 }
 
 .meal-attributes {
