@@ -260,19 +260,22 @@
 }
 
 .tag--dairy {
-  background-color: #24aeeb;
+  background-color: #5da3ea;
 }
 .tag--meat {
-  background-color: red;
+  background-color: #d42421;
 }
 .tag--vegetable {
-  background-color: green;
+  background-color: #589d59;
 }
 .tag--fruit {
-  background-color: orange;
+  background-color: #f49d37;
 }
 .tag--seafood {
-  background-color: #94d82d;
+  background-color: #fcc5b1;
+}
+.tag--misc {
+  background-color: #5e503f;
 }
 
 .meal-title {
