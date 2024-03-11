@@ -84,14 +84,21 @@ export const EditItemPageTable = ({ itemToEdit }) => {
                 </td>
 
                 <td>
-                  <label for="itemType">Item Type</label>
-                  <input
-                    type="text"
-                    placeholder="Type of Product"
+                  <label htmlFor="itemType">Item Type</label>
+                  <select
                     value={itemType}
                     onChange={(e) => setItemType(e.target.value)}
                     id="itemType"
-                  />
+                  >
+                    <option value="">Select Type</option>{" "}
+                    {/* Optional: Adds a prompt to select an option */}
+                    <option value="meat">Meat</option>
+                    <option value="dairy">Dairy</option>
+                    <option value="fruit">Fruit</option>
+                    <option value="veges">Veges</option>
+                    <option value="seafood">Seafood</option>
+                    <option value="other">Other</option>
+                  </select>
                 </td>
 
                 <td>
