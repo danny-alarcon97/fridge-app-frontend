@@ -21,8 +21,8 @@ function Item({ item, onEdit, onDelete }) {
       <img src="./img/customers/ben.jpg" className="meal-img" alt="user" />
       <div className="meal-content">
         <div className="meal-tags">
-          <span className="tag tag--vegan">
-            {item.itemType ? item.itemType : "other"}
+          <span className={`tag tag--${item.itemType}`}>
+            {capitalizeFirstLetter(item.itemType) || "Other"}
           </span>
         </div>
         <p className="meal-title">{capitalizeFirstLetter(item.name)}</p>
