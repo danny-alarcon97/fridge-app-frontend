@@ -3,6 +3,13 @@ import { FaRegEdit } from "react-icons/fa";
 import { FaTrashCan } from "react-icons/fa6";
 
 function Item({ item, onEdit, onDelete }) {
+  const formattedPrice = item.price
+    ? new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+      }).format(item.price)
+    : "N/A";
+
   return (
     <div className="meal">
       <img src="./img/customers/ben.jpg" className="meal-img" alt="user" />
@@ -33,7 +40,7 @@ function Item({ item, onEdit, onDelete }) {
           </li>
           <li className="meal-attribute">
             <span>
-              <strong>Price: $</strong> {item.price}
+              <strong>Price:</strong> {formattedPrice}
             </span>
           </li>
           <li className="meal-attribute">
