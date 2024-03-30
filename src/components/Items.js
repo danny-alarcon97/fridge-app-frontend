@@ -2,6 +2,12 @@ import React from "react";
 import { FaRegEdit } from "react-icons/fa";
 import { FaTrashCan } from "react-icons/fa6";
 
+// Capitalize the first letter of a string
+function capitalizeFirstLetter(string) {
+  if (!string) return ""; // Return an empty string if input is falsy (e.g., undefined, '')
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function Item({ item, onEdit, onDelete }) {
   const formattedPrice = item.price
     ? new Intl.NumberFormat("en-US", {
@@ -19,11 +25,11 @@ function Item({ item, onEdit, onDelete }) {
             {item.itemType ? item.itemType : "other"}
           </span>
         </div>
-        <p className="meal-title">{item.name}</p>
+        <p className="meal-title">{capitalizeFirstLetter(item.name)}</p>
         <ul className="meal-attributes">
           <li className="meal-attribute">
             <span>
-              <strong>Brand:</strong> {item.brand}
+              <strong>Brand:</strong> {capitalizeFirstLetter(item.brand)}
             </span>
           </li>
           <li className="meal-attribute">
@@ -45,7 +51,8 @@ function Item({ item, onEdit, onDelete }) {
           </li>
           <li className="meal-attribute">
             <span>
-              <strong>Compartment:</strong> {item.compartment}
+              <strong>Compartment:</strong>{" "}
+              {capitalizeFirstLetter(item.compartment)}
             </span>
           </li>
           <li className="meal-attribute">

@@ -146,14 +146,19 @@ export const EditItemPageTable = ({ itemToEdit }) => {
                 </td>
 
                 <td>
-                  <label for="compartment">Kitchen Compartment</label>
-                  <input
-                    type="text"
-                    placeholder="Kitchen Compartment"
+                  <label htmlFor="compartment">Kitchen Compartment</label>
+                  <select
                     value={compartment}
                     onChange={(e) => setCompartment(e.target.value)}
                     id="compartment"
-                  />
+                    required // This makes the field required
+                  >
+                    <option value="">Select Compartment</option>{" "}
+                    {/* This option cannot be chosen due to 'required' */}
+                    <option value="fridge">Fridge</option>
+                    <option value="freezer">Freezer</option>
+                    <option value="pantry">Pantry</option>
+                  </select>
                 </td>
 
                 <td>
