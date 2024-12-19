@@ -9,6 +9,20 @@ function capitalizeFirstLetter(string) {
 }
 
 function Item({ item, onEdit, onDelete }) {
+  // Image mapping based on itemType
+  const itemTypeImages = {
+    dairy: "./img/food-imgs/dairy-img.png",
+    meat: "./img/food-imgs/meat-img.png",
+    vegetable: "./img/food-imgs/veges-img.png",
+    fruit: "./img/food-imgs/fruit-img.png",
+    seafood: "./img/food-imgs/seafood-img.png",
+    misc: "./img/food-imgs/other-items-img.png", // Default image for unclassified items
+  };
+
+  // Get the image path based on itemType
+  const imagePath =
+    itemTypeImages[item.itemType] || "./img/food-imgs/other-items-img.png"; // Default image
+
   const formattedPrice = item.price
     ? new Intl.NumberFormat("en-US", {
         style: "currency",
@@ -18,7 +32,7 @@ function Item({ item, onEdit, onDelete }) {
 
   return (
     <div className="meal">
-      <img src="./img/customers/ben.jpg" className="meal-img" alt="user" />
+      <img src={imagePath} className="meal-img" alt={item.itemType} />
       <div className="meal-content">
         <div className="meal-tags">
           <span className={`tag tag--${item.itemType}`}>

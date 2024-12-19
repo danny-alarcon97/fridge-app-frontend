@@ -27,12 +27,30 @@ function Hero() {
           </a>
           <div className="user-population">
             <div className="user-imgs">
-              <img src="./img/customers/ben.jpg" alt="user photo" />
-              <img src="./img/customers/customer-1.jpg" alt="user photo" />
-              <img src="./img/customers/customer-2.jpg" alt="user photo" />
-              <img src="./img/customers/customer-3.jpg" alt="user photo" />
-              <img src="./img/customers/customer-4.jpg" alt="user photo" />
-              <img src="./img/customers/customer-5.jpg" alt="user photo" />
+              <img
+                src="./img/customers/ben.jpg"
+                alt="Customer profile picture 1"
+              />
+              <img
+                src="./img/customers/customer-1.jpg"
+                alt="Customer profile picture 2"
+              />
+              <img
+                src="./img/customers/customer-2.jpg"
+                alt="Customer profile picture 3"
+              />
+              <img
+                src="./img/customers/customer-3.jpg"
+                alt="Customer profile picture 4"
+              />
+              <img
+                src="./img/customers/customer-4.jpg"
+                alt="Customer profile picture 5"
+              />
+              <img
+                src="./img/customers/customer-5.jpg"
+                alt="Customer profile picture 6"
+              />
             </div>
             <p className="user-text">
               <span>Empowering</span> you to make the most of every ingredient

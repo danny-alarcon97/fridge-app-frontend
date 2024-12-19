@@ -68,7 +68,7 @@ function App() {
         </main>
 
         <footer>
-          <p>&copy; 2023 Daniel Alarcon Huesca</p>
+          <p>&copy; 2024 Daniel Alarcon Huesca</p>
         </footer>
       </BrowserRouter>
     </>
