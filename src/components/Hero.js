@@ -19,7 +19,7 @@ function Hero() {
             simplify your meal prep, this app is the ideal solution for
             efficient kitchen management.
           </p>
-          <a href="#" className="btn btn--full margin-right-sm">
+          <a href="#kitchen" className="btn btn--full margin-right-sm">
             Peek into my kitchen
           </a>
           <a href="#how" className="btn btn--outline">
@@ -27,29 +27,26 @@ function Hero() {
           </a>
           <div className="user-population">
             <div className="user-imgs">
-              <img
-                src="./img/customers/ben.jpg"
-                alt="Customer profile picture 1"
-              />
+              <img src="./img/customers/ben.jpg" alt="Customer profile 1" />
               <img
                 src="./img/customers/customer-1.jpg"
-                alt="Customer profile picture 2"
+                alt="Customer profile 2"
               />
               <img
                 src="./img/customers/customer-2.jpg"
-                alt="Customer profile picture 3"
+                alt="Customer profile 3"
               />
               <img
                 src="./img/customers/customer-3.jpg"
-                alt="Customer profile picture 4"
+                alt="Customer profile 4"
               />
               <img
                 src="./img/customers/customer-4.jpg"
-                alt="Customer profile picture 5"
+                alt="Customer profile 5"
               />
               <img
                 src="./img/customers/customer-5.jpg"
-                alt="Customer profile picture 6"
+                alt="Customer profile 6"
               />
             </div>
             <p className="user-text">

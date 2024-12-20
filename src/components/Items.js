@@ -13,7 +13,7 @@ function Item({ item, onEdit, onDelete }) {
   const itemTypeImages = {
     dairy: "./img/food-imgs/dairy-img.png",
     meat: "./img/food-imgs/meat-img.png",
-    vegetable: "./img/food-imgs/veges-img.png",
+    veges: "./img/food-imgs/veges-img.png",
     fruit: "./img/food-imgs/fruit-img.png",
     seafood: "./img/food-imgs/seafood-img.png",
     misc: "./img/food-imgs/other-items-img.png", // Default image for unclassified items
